@@ -43,5 +43,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 //TechXploreSeed.Initialize(app.Services);
-
+string luka = "luka";
 app.Run();
