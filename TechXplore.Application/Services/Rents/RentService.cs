@@ -34,8 +34,8 @@ namespace TechXplore.Application.Services.Rents
         public async Task<RentResponseModel> GetRentByYearAndMonth(CancellationToken cancellationToken, int year, int month)
         {
             IEnumerable<Rent> rent = await _rentRepository.GetAllAsync(cancellationToken);
-            rent.SingleOrDefault(x => x.Year == year && x.Month == month);
-            return rent.Adapt<RentResponseModel>();
+            Rent myRent = rent.SingleOrDefault(x => x.Year == year && x.Month == month);
+            return myRent.Adapt<RentResponseModel>();
         }
     }
 }
