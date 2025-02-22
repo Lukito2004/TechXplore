@@ -1,0 +1,6 @@
+@TechXplore.API_HostAddress = http://localhost:5134
+
+GET {{TechXplore.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
